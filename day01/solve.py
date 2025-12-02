@@ -3,6 +3,8 @@
 """
 Advent of Code 2k25 - Day 01
 Day 1: Secret Entrance
+]
+Find how to open the safe door
 
 This challenge has two parts.
 [PART] indicates which part the code is for.
@@ -21,7 +23,9 @@ def read_input(filename: str) -> list[str]:
     with open(filename, 'r') as file:
         return file.read().splitlines()
 
+
 def do_sequence(sequence: str) -> None:
+    '''Handles the sequence and counts only when the dial lands on zero.'''
     global actual_dial
     global nb_zeros
 
@@ -37,6 +41,7 @@ def do_sequence(sequence: str) -> None:
         print(f"Hit zero {nb_zeros} times")
 
     actual_dial = new_dial
+
 
 def do_sequence_2(sequence: str) -> None:
     '''Handles the sequence and counts every time the dial passes through zero.'''
@@ -61,6 +66,7 @@ def do_sequence_2(sequence: str) -> None:
             print(f"Hit zero {nb_zeros} times")
             dist_to_zero = MAX_DIAL + 1
         actual_dial = (actual_dial - distance) % (MAX_DIAL + 1)
+
 
 def main(argv: list[str]) -> int:
     if len(argv) < 3:

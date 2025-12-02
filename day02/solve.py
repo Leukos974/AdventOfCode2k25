@@ -4,6 +4,11 @@
 Advent of Code 2k25 - Day 02
 Day 02: Gift Shop
 
+Find the sum of all invalid gift IDs in the given ranges.
+
+This challenge has two parts.
+[PART] indicates which part the code is for.
+
 Usage:
     ./solve.py input.txt
 """
